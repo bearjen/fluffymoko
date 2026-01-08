@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
@@ -27,11 +27,11 @@ const Settings = () => {
       <div style={{ background: 'white', padding: '30px', borderRadius: '15px', display: 'inline-block', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
         <input 
           type="text" value={syncKey} onChange={(e) => setSyncKey(e.target.value)}
-          placeholder="輸入同步金鑰" style={{ padding: '10px', width: '250px', marginBottom: '10px' }}
+          placeholder="輸入同步金鑰" style={{ padding: '10px', width: '250px', marginBottom: '10px', border: '1px solid #ccc' }}
         />
         <br />
         <button onClick={handleSync} style={{ padding: '10px 20px', backgroundColor: '#2b6cb0', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
-          開始備份
+          🚀 開始備份
         </button>
         {status && <p>{status}</p>}
       </div>
